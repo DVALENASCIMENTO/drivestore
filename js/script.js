@@ -1,27 +1,53 @@
+// Catálogo (exemplo). Substitua imagem pelos seus arquivos/links.
 const produtos = [
-    {
-        nome: "carregador",
-        descricao: "android",
-        preco: 69.90,
-        imagem: "https",
-    },
-    {
-        nome: "carregador",
-        descricao: "android",
-        preco: 69.90,
-        imagem: "https",
-    }
+  {
+    nome: "Carregador Turbo USB-C 20W",
+    descricao: "Compatível iPhone/Android. Proteção contra sobrecarga.",
+    preco: 69.90,
+    imagem: "https://via.placeholder.com/400x300?text=Carregador"
+  },
+  {
+    nome: "Fone Bluetooth TWS",
+    descricao: "Cápsula touch, case com recarga. Até 4h de uso.",
+    preco: 129.90,
+    imagem: "https://via.placeholder.com/400x300?text=Fone+TWS"
+  },
+  {
+    nome: "Cabo Nylon USB-C 1m",
+    descricao: "Reforçado, alta durabilidade, suporte a carga rápida.",
+    preco: 29.90,
+    imagem: "https://via.placeholder.com/400x300?text=Cabo+USB-C"
+  },
+  {
+    nome: "Mouse Sem Fio",
+    descricao: "Ergonômico, 1600 DPI, receptor 2.4GHz.",
+    preco: 79.90,
+    imagem: "https://via.placeholder.com/400x300?text=Mouse"
+  },
+  {
+    nome: "Suporte Veicular Magnético",
+    descricao: "Fixação forte no painel, base metálica inclusa.",
+    preco: 39.90,
+    imagem: "https://via.placeholder.com/400x300?text=Suporte"
+  },
+  {
+    nome: "Teclado Slim USB",
+    descricao: "Layout ABNT2, digitação confortável, plug-and-play.",
+    preco: 89.90,
+    imagem: "https://via.placeholder.com/400x300?text=Teclado"
+  }
 ];
 
 const formatBRL = (n) =>
-    n.toLocalString("pt-BR", {style: "currency", currency: "BRL" });
+  n.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 
+// Monta cards
 const grid = document.getElementById("produtos");
 
 function montarCard(prod){
-    const card = document.createElement("article");
-    card.className = "card";
-    card.innerHTML = `
+  const card = document.createElement("article");
+  card.className = "card";
+  card.innerHTML = `
     <div class="image">
       <img src="${prod.imagem}" alt="${prod.nome}" loading="lazy" />
     </div>
@@ -39,14 +65,14 @@ function montarCard(prod){
 }
 
 function montarGrade(){
-    grid.innerHTML = "";
-    produtos.forEach(p => grid.appendChild(montarCard(p)));
+  grid.innerHTML = "";
+  produtos.forEach(p => grid.appendChild(montarCard(p)));
 }
 
 function linkWhatsApp(texto){
-    const numero = window.WHATSAPP_NUMERO || "";
-    const msg = encodeURIComponent(texto);
-    return `https://wa.me/${numero}?text=${msg}`;
+  const numero = window.WHATSAPP_NUMERO || "";
+  const msg = encodeURIComponent(texto);
+  return `https://wa.me/${numero}?text=${msg}`;
 }
 
 // Delegação de clique para botões “Comprar no WhatsApp”
@@ -65,4 +91,3 @@ Pode confirmar disponibilidade no Uber?`;
 });
 
 montarGrade();
-
