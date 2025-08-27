@@ -1,4 +1,4 @@
-// Catálogo (exemplo). Substitua imagem pelos seus arquivos/links.
+// Catálogo de produtos
 const produtos = [
   {
     nome: "Carregador Turbo USB-C 20W",
@@ -38,13 +38,15 @@ const produtos = [
   }
 ];
 
+// Função para formatar preços em BRL
 const formatBRL = (n) =>
   n.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 
-// Monta cards
+// Container dos produtos
 const grid = document.getElementById("produtos");
 
-function montarCard(prod){
+// Monta um card de produto
+function montarCard(prod) {
   const card = document.createElement("article");
   card.className = "card";
   card.innerHTML = `
@@ -64,21 +66,23 @@ function montarCard(prod){
   return card;
 }
 
-function montarGrade(){
+// Renderiza a grade de produtos
+function montarGrade() {
   grid.innerHTML = "";
   produtos.forEach(p => grid.appendChild(montarCard(p)));
 }
 
-function linkWhatsApp(texto){
+// Monta link para o WhatsApp usando número global
+function linkWhatsApp(texto) {
   const numero = window.WHATSAPP_NUMERO || "";
   const msg = encodeURIComponent(texto);
   return `https://wa.me/${numero}?text=${msg}`;
 }
 
-// Delegação de clique para botões “Comprar no WhatsApp”
+// Captura clique nos botões "Comprar no WhatsApp"
 document.addEventListener("click", (e) => {
   const a = e.target.closest("a.btn.btn-primary");
-  if(!a) return;
+  if (!a) return;
   e.preventDefault();
   const nome = a.dataset.produto;
   const preco = Number(a.dataset.preco);
@@ -90,4 +94,5 @@ Pode confirmar disponibilidade no Uber?`;
   window.open(href, "_blank", "noopener");
 });
 
+// Inicializa catálogo
 montarGrade();
