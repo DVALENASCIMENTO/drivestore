@@ -1,41 +1,29 @@
 // Catálogo de produtos
 const produtos = [
   {
-    nome: "Carregador Turbo USB-C 20W",
-    descricao: "Compatível iPhone/Android. Proteção contra sobrecarga.",
-    preco: 69.90,
-    imagem: "https://via.placeholder.com/400x300?text=Carregador"
-  },
-  {
-    nome: "Fone Bluetooth TWS",
-    descricao: "Cápsula touch, case com recarga. Até 4h de uso.",
-    preco: 129.90,
-    imagem: "https://via.placeholder.com/400x300?text=Fone+TWS"
-  },
-  {
-    nome: "Cabo Nylon USB-C 1m",
-    descricao: "Reforçado, alta durabilidade, suporte a carga rápida.",
+    nome: "Carregador Rápido USB-C",
+    descricao: "Carregador rápido α’GOLD CA36-4, com 3 portas USB, 5.1A",
     preco: 29.90,
-    imagem: "https://via.placeholder.com/400x300?text=Cabo+USB-C"
+    imagem: "/image/carregador.jpeg"
   },
   {
-    nome: "Mouse Sem Fio",
-    descricao: "Ergonômico, 1600 DPI, receptor 2.4GHz.",
-    preco: 79.90,
-    imagem: "https://via.placeholder.com/400x300?text=Mouse"
+    nome: "Fone de Ouvido",
+    descricao: "Fone de ouvido estéreo *LEHENG* modelo *LE-024I*, com fio, design intra-auricular, som Hi-Fi e microfone integrado para chamadas, cores diversas.",
+    preco: 11.90,
+    imagem: "/image/fones.jpg"
   },
   {
-    nome: "Suporte Veicular Magnético",
-    descricao: "Fixação forte no painel, base metálica inclusa.",
-    preco: 39.90,
-    imagem: "https://via.placeholder.com/400x300?text=Suporte"
+    nome: "Cabo IOS USB-C",
+    descricao: "Cabo para Iphone Ipad Lightining Inova 2.4A Cbo-6313 cores diversas Emborrachado - 1.2mt",
+    preco: 14.90,
+    imagem: "/image/cabo_ios.jpg"
   },
   {
-    nome: "Teclado Slim USB",
-    descricao: "Layout ABNT2, digitação confortável, plug-and-play.",
-    preco: 89.90,
-    imagem: "https://via.placeholder.com/400x300?text=Teclado"
-  }
+    nome: "Cabo USB-C",
+    descricao: "Cabo Tipo C para Android USB-A Inova 2.4A CBO-6312 cores diversas Emborrachado – 1.2 mt",
+    preco: 14.90,
+    imagem: "/image/cabo_tipo_c.jpg"
+  },
 ];
 
 // Função para formatar preços em BRL
