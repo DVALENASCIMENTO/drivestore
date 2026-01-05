@@ -22,7 +22,7 @@ const produtos = [
     nome: "Cabo USB-C",
     descricao: "Cabo Tipo C para Android USB-A Inova 2.4A CBO-6312 cores diversas Emborrachado – 1.2 mt",
     preco: 14.90,
-    imagem: "/image/cabo_tipo_c.jpg"
+    imagem: "image/cabo_tipo_c.jpg"
   },
 ];
 
