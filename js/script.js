@@ -4,19 +4,19 @@ const produtos = [
     nome: "Carregador Rápido USB-C",
     descricao: "Carregador rápido α’GOLD CA36-4, com 3 portas USB, 5.1A",
     preco: 29.90,
-    imagem: "/image/carregador.jpeg"
+    imagem: "image/carregador.jpeg"
   },
   {
     nome: "Fone de Ouvido",
     descricao: "Fone de ouvido estéreo *LEHENG* modelo *LE-024I*, com fio, design intra-auricular, som Hi-Fi e microfone integrado para chamadas, cores diversas.",
     preco: 11.90,
-    imagem: "/image/fones.jpg"
+    imagem: "image/fones.jpg"
   },
   {
     nome: "Cabo IOS USB-C",
     descricao: "Cabo para Iphone Ipad Lightining Inova 2.4A Cbo-6313 cores diversas Emborrachado - 1.2mt",
     preco: 14.90,
-    imagem: "/image/cabo_ios.jpg"
+    imagem: "image/cabo_ios.jpg"
   },
   {
     nome: "Cabo USB-C",
